@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>DictionaryContainsKey Constraint | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="DictionaryContainsKey Constraint | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -96,13 +97,15 @@ Does.ContainKey(object)
 Does.Not.ContainKey(object)
 </code></pre>
 <h2 id="modifiers">Modifiers</h2>
-<pre><code class="lang-csharp">...Using(IComparer comparer)
+<pre><code class="lang-csharp">...IgnoreCase
+...IgnoreWhiteSpace  // From version 4.2
 ...Using(IEqualityComparer comparer)
+...Using(IComparer comparer)
+...Using&lt;T&gt;(IEqualityComparer&lt;T&gt; comparer)
 ...Using&lt;T&gt;(IComparer&lt;T&gt; comparer)
 ...Using&lt;T&gt;(Comparison&lt;T&gt; comparer)
 ...Using&lt;T&gt;(Func&lt;T, T, bool&gt; comparer)
-...Using&lt;T&gt;(IEqualityComparer&lt;T&gt; comparer)
-...Using&lt;TCollectionType, TMemberType&gt;(Func&lt;TCollectionType, TMemberType, bool&gt; comparison)
+...UsingPropertiesComparer()  // From version 4.1
 ...WithValue(object expectedValue)
 </code></pre>
 <h2 id="examples-of-use">Examples of Use</h2>
@@ -119,6 +122,7 @@ Assert.That(mydict, Does.ContainKey(&quot;Hello&quot;).WithValue(&quot;World&quo
 <li><a href="DictionaryContainsValueConstraint.html">DictionaryContainsValueConstraint</a></li>
 <li><a href="DictionaryContainsKeyValuePairConstraint.html">DictionaryContainsKeyValuePairConstraint</a></li>
 </ul>
+
 </article>
           </div>
 
@@ -127,7 +131,7 @@ Assert.That(mydict, Does.ContainKey(&quot;Hello&quot;).WithValue(&quot;World&quo
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/constraints/DictionaryContainsKeyConstraint.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/constraints/DictionaryContainsKeyConstraint.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

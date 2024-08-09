@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>NUnit3002 | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="NUnit3002 | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
@@ -112,14 +113,16 @@
 </tr>
 <tr>
 <td style="text-align: left;">Code</td>
-<td style="text-align: left;"><a href="https://github.com/nunit/nunit.analyzers/blob/3.8.0/src/nunit.analyzers/DiagnosticSuppressors/NonNullableFieldOrPropertyIsUninitializedSuppressor.cs">NonNullableFieldOrPropertyIsUninitializedSuppressor</a></td>
+<td style="text-align: left;"><a href="https://github.com/nunit/nunit.analyzers/blob/4.1.0/src/nunit.analyzers/DiagnosticSuppressors/NonNullableFieldOrPropertyIsUninitializedSuppressor.cs">NonNullableFieldOrPropertyIsUninitializedSuppressor</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="description">Description</h2>
 <p>This rule check diagnostics reported by the CS8618 compiler error:</p>
-<p><code>CS8618: Non-nullable field '_name_' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.</code>
-<code>CS8618: Non-nullable property '_Name_' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.</code></p>
+<ul>
+<li><code>CS8618: Non-nullable field '_name_' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.</code></li>
+<li><code>CS8618: Non-nullable property '_Name_' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.</code></li>
+</ul>
 <p>If the violating field/property is set in the <code>SetUp</code> or <code>OneTimeSetUp</code> method. The rule suppresses the error.
 This allows for non-nullable fields/properties to be used in a <code>TestFixture</code>.</p>
 <p>The rule does detect indirect calls, when the field is set in a method called by the <code>SetUp</code> or <code>OneTimeSetUp</code> methods.</p>
@@ -152,12 +155,14 @@ or use the null suppression operator (<code>!</code>) everywhere.</p>
 <p>The rule has no severity, but can be disabled.</p>
 <h3 id="via-ruleset-file">Via ruleset file</h3>
 <p>To disable the rule for a project, you need to add a
-<a href="https://github.com/nunit/nunit.analyzers/blob/3.8.0/src/nunit.analyzers/DiagnosticSuppressors/NUnit.Analyzers.Suppressions.ruleset">ruleset file</a></p>
+<a href="https://github.com/nunit/nunit.analyzers/blob/4.1.0/src/nunit.analyzers/DiagnosticSuppressors/NUnit.Analyzers.Suppressions.ruleset">ruleset file</a></p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;RuleSet Name=&quot;NUnit.Analyzer Suppressions&quot; Description=&quot;DiagnosticSuppression Rules&quot; ToolsVersion=&quot;12.0&quot;&gt;
   &lt;Rules AnalyzerId=&quot;DiagnosticSuppressors&quot; RuleNamespace=&quot;NUnit.NUnitAnalyzers&quot;&gt;
     &lt;Rule Id=&quot;NUnit3001&quot; Action=&quot;Info&quot; /&gt; &lt;!-- Possible Null Reference --&gt;
     &lt;Rule Id=&quot;NUnit3002&quot; Action=&quot;Info&quot; /&gt; &lt;!-- NonNullableField/Property is Uninitialized --&gt;
+    &lt;Rule Id=&quot;NUnit3003&quot; Action=&quot;Info&quot; /&gt; &lt;!-- Avoid Uninstantiated Internal Classes --&gt;
+    &lt;Rule Id=&quot;NUnit3004&quot; Action=&quot;Info&quot; /&gt; &lt;!-- Types that own disposable fields should be disposable --&gt;
   &lt;/Rules&gt;
 &lt;/RuleSet&gt;
 </code></pre>
@@ -173,6 +178,7 @@ or use the null suppression operator (<code>!</code>) everywhere.</p>
 dotnet_diagnostic.NUnit3002.severity = none
 </code></pre>
 <!-- end generated config severity -->
+
 </article>
           </div>
 
@@ -181,7 +187,7 @@ dotnet_diagnostic.NUnit3002.severity = none
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit-analyzers/NUnit3002.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit-analyzers/NUnit3002.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

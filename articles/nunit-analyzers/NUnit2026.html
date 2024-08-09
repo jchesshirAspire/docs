@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>NUnit2026 | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="NUnit2026 | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
@@ -112,20 +113,23 @@
 </tr>
 <tr>
 <td style="text-align: left;">Code</td>
-<td style="text-align: left;"><a href="https://github.com/nunit/nunit.analyzers/blob/3.8.0/src/nunit.analyzers/SomeItemsIncompatibleTypes/SomeItemsIncompatibleTypesAnalyzer.cs">SomeItemsIncompatibleTypesAnalyzer</a></td>
+<td style="text-align: left;"><a href="https://github.com/nunit/nunit.analyzers/blob/4.1.0/src/nunit.analyzers/SomeItemsIncompatibleTypes/SomeItemsIncompatibleTypesAnalyzer.cs">SomeItemsIncompatibleTypesAnalyzer</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="description">Description</h2>
-<p>The SomeItemsConstraint with EqualConstraint requires the actual argument to be a collection where the element type can match the type of the expected argument.</p>
+<p>The SomeItemsConstraint with EqualConstraint requires the actual argument to be a collection where the element type can
+match the type of the expected argument.</p>
 <h2 id="motivation">Motivation</h2>
-<p>Using Does.Contain or Contains.Item constraints with actual argument, which is either not a collection, or has wrong element type, leads to assertion error.</p>
+<p>Using Does.Contain or Contains.Item constraints with actual argument, which is either not a collection, or has wrong
+element type, leads to assertion error.</p>
 <h2 id="how-to-fix-violations">How to fix violations</h2>
 <p>Fix the actual value or use appropriate constraint.</p>
 <!-- start generated config severity -->
 <h2 id="configure-severity">Configure severity</h2>
 <h3 id="via-ruleset-file">Via ruleset file</h3>
-<p>Configure the severity per project, for more info see <a href="https://learn.microsoft.com/en-us/visualstudio/code-quality/using-rule-sets-to-group-code-analysis-rules?view=vs-2022">MSDN</a>.</p>
+<p>Configure the severity per project, for more info see
+<a href="https://learn.microsoft.com/en-us/visualstudio/code-quality/using-rule-sets-to-group-code-analysis-rules?view=vs-2022">MSDN</a>.</p>
 <h3 id="via-editorconfig-file">Via .editorconfig file</h3>
 <pre><code class="lang-ini"># NUnit2026: Wrong actual type used with the SomeItemsConstraint with EqualConstraint
 dotnet_diagnostic.NUnit2026.severity = chosenSeverity
@@ -145,6 +149,7 @@ Code violating the rule here
     Justification = &quot;Reason...&quot;)]
 </code></pre>
 <!-- end generated config severity -->
+
 </article>
           </div>
 
@@ -153,7 +158,7 @@ Code violating the rule here
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit-analyzers/NUnit2026.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit-analyzers/NUnit2026.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

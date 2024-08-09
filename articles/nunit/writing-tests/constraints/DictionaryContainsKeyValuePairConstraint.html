@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>DictionaryContainsKeyValuePairConstraint Constraint | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="DictionaryContainsKeyValuePairConstraint Constraint | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -106,11 +107,23 @@ Assert.That(dictionary, Does.Not.ContainKey(&quot;Hello&quot;).WithValue(&quot;N
 Assert.That(dictionary, new DictionaryContainsKeyValuePairConstraint(&quot;HI&quot;, &quot;UNIVERSE&quot;).IgnoreCase);
 Assert.That(dictionary, new DictionaryContainsKeyValuePairConstraint(&quot;HI&quot;, &quot;UNIVERSE&quot;).Using&lt;string&gt;((x, y) =&gt; StringUtil.Compare(x, y, true)));
 </code></pre>
+<h2 id="modifiers">Modifiers</h2>
+<pre><code class="lang-csharp">...IgnoreCase
+...IgnoreWhiteSpace  // From version 4.2
+...Using(IComparer comparer)
+...Using(IEqualityComparer comparer)
+...Using&lt;T&gt;(IComparer&lt;T&gt; comparer)
+...Using&lt;T&gt;(Comparison&lt;T&gt; comparer)
+...Using&lt;T&gt;(Func&lt;T, T, bool&gt; comparer)
+...Using&lt;T&gt;(IEqualityComparer&lt;T&gt; comparer)
+...UsingPropertiesComparer()  // From version 4.1
+</code></pre>
 <h2 id="see-also">See also</h2>
 <ul>
 <li><a href="DictionaryContainsValueConstraint.html">DictionaryContainsValueConstraint</a></li>
 <li><a href="DictionaryContainsKeyConstraint.html">DictionaryContainsKeyConstraint</a></li>
 </ul>
+
 </article>
           </div>
 
@@ -119,7 +132,7 @@ Assert.That(dictionary, new DictionaryContainsKeyValuePairConstraint(&quot;HI&qu
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/constraints/DictionaryContainsKeyValuePairConstraint.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/constraints/DictionaryContainsKeyValuePairConstraint.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>ICommandWrapper Interface | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="ICommandWrapper Interface | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -85,8 +86,12 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="icommandwrapper-interface">ICommandWrapper Interface</h1>
 
-<p>In NUnit 3, test execution is done using command objects, which are constructed for each test case. Execution of a single test case will  generally require multiple nested commands. Some attributes placed on a test method are able to contribute to the chain of commands. For example, <code>MaxTimeAttribute</code> adds a command, which examines the elapsed time to complete a test and fails it if a specified maximum was exceeded.</p>
-<p>Attributes add to the command chain by implementing one of the two interfaces that derive from the <code>ICommandWrapper</code> interface. The interfaces are defined as follows:</p>
+<p>In NUnit 3, test execution is done using command objects, which are constructed for each test case. Execution of a
+single test case will  generally require multiple nested commands. Some attributes placed on a test method are able to
+contribute to the chain of commands. For example, <code>MaxTimeAttribute</code> adds a command, which examines the elapsed time to
+complete a test and fails it if a specified maximum was exceeded.</p>
+<p>Attributes add to the command chain by implementing one of the two interfaces that derive from the <code>ICommandWrapper</code>
+interface. The interfaces are defined as follows:</p>
 <pre><code class="lang-csharp">public interface ICommandWrapper
 {
     TestCommand Wrap(TestCommand command);
@@ -100,8 +105,12 @@ public interface IWrapSetUpTearDown : ICommandWrapper
 {
 }
 </code></pre>
-<p>Attributes should <strong>not</strong> implement the <code>ICommandWrapper</code> interface directly but should select one of the derived interfaces. NUnit applies the <code>IWrapSetUpTearDown</code> interface before SetUp and after TearDown. It applies the <code>IWrapTestMethod</code> interface after SetUp and before the test is run.</p>
-<p>Attributes implementing one of these interfaces must be placed on a test method. Otherwise, they have no effect. The <code>Wrap</code> method should return an appropriate command in which the original command has been nested. For an example, see the implementation of <code>MaxTimeAttribute</code>.</p>
+<p>Attributes should <strong>not</strong> implement the <code>ICommandWrapper</code> interface directly but should select one of the derived
+interfaces. NUnit applies the <code>IWrapSetUpTearDown</code> interface before SetUp and after TearDown. It applies the
+<code>IWrapTestMethod</code> interface after SetUp and before the test is run.</p>
+<p>Attributes implementing one of these interfaces must be placed on a test method. Otherwise, they have no effect. The
+<code>Wrap</code> method should return an appropriate command in which the original command has been nested. For an example, see
+the implementation of <code>MaxTimeAttribute</code>.</p>
 <p>The following NUnit attributes implement the <code>IWrapSetUpTearDown</code> interface:</p>
 <ul>
 <li><code>MaxTimeAttribute</code></li>
@@ -109,6 +118,7 @@ public interface IWrapSetUpTearDown : ICommandWrapper
 <li><code>RetryAttribute</code></li>
 </ul>
 <p>The <code>IWrapTestMethod</code>interface is not currently used by any NUnit attributes.</p>
+
 </article>
           </div>
 
@@ -117,7 +127,7 @@ public interface IWrapSetUpTearDown : ICommandWrapper
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/extending-nunit/ICommandWrapper-Interface.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/extending-nunit/ICommandWrapper-Interface.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

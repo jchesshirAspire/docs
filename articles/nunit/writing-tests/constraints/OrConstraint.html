@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>Or Constraint | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Or Constraint | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -96,13 +97,16 @@
 <pre><code class="lang-csharp">Assert.That(3, Is.LessThan(5).Or.GreaterThan(10));
 </code></pre>
 <h2 id="evaluation-order-and-precedence">Evaluation Order and Precedence</h2>
-<p>Note that the constraint evaluates the sub-constraints left to right, meaning that <code>Assert.That(i, Is.Null.Or.GreaterThan(9));</code> where <code>i</code> is a nullable <code>int</code> will work for both <code>12</code> and <code>null</code>. On the other hand,
-<code>Assert.That(i, Is.GreaterThan(9).Or.Null);</code> will only work for <code>12</code>, but throw an exception for <code>null</code>, as <code>null</code> cannot be compared to <code>9</code>.</p>
+<p>Note that the constraint evaluates the sub-constraints left to right, meaning that
+<code>Assert.That(i,Is.Null.Or.GreaterThan(9));</code> where <code>i</code> is a nullable <code>int</code> will work for both <code>12</code> and <code>null</code>. On the
+other hand, <code>Assert.That(i, Is.GreaterThan(9).Or.Null);</code> will only work for <code>12</code>, but throw an exception for <code>null</code>, as
+<code>null</code> cannot be compared to <code>9</code>.</p>
 <p>The <strong>OrConstraint</strong> has precedence over the <strong>AndConstraint</strong>.</p>
 <h2 id="see-also">See also</h2>
 <ul>
 <li><a href="AndConstraint.html">AndConstraint</a></li>
 </ul>
+
 </article>
           </div>
 
@@ -111,7 +115,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/constraints/OrConstraint.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/constraints/OrConstraint.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

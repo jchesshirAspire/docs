@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>CollectionEquivalent Constraint | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="CollectionEquivalent Constraint | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -93,6 +94,18 @@ the same items, in any order. If the actual value passed does not implement <cod
 <h2 id="syntax">Syntax</h2>
 <pre><code class="lang-csharp">Is.EquivalentTo(IEnumerable other)
 </code></pre>
+<h2 id="modifiers">Modifiers</h2>
+<pre><code class="lang-csharp">...IgnoreCase
+...IgnoreWhiteSpace  // From version 4.2
+...Using(IEqualityComparer comparer)
+...Using(IComparer comparer)
+...Using&lt;T&gt;(IEqualityComparer&lt;T&gt; comparer)
+...Using&lt;T&gt;(IComparer&lt;T&gt; comparer)
+...Using&lt;T&gt;(Comparison&lt;T&gt; comparer)
+...Using&lt;T&gt;(Func&lt;T, T, bool&gt; comparer)
+...Using&lt;TActualElement, TExpectedElement&gt;(Func&lt;TActualElement, TExpectedElement, bool&gt; comparison)
+...UsingPropertiesComparer()  // From version 4.1
+</code></pre>
 <h2 id="examples-of-use">Examples of Use</h2>
 <pre><code class="lang-csharp">int[] iarray = new int[] { 1, 2, 3 };
 string[] sarray = new string[] { &quot;a&quot;, &quot;b&quot;, &quot;c&quot; };
@@ -103,6 +116,7 @@ Assert.That(new int[] { 1, 2, 2 }, Is.Not.EquivalentTo(iarray));
 <ol>
 <li>To compare items in order, use Is.EqualTo().</li>
 </ol>
+
 </article>
           </div>
 
@@ -111,7 +125,7 @@ Assert.That(new int[] { 1, 2, 2 }, Is.Not.EquivalentTo(iarray));
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/constraints/CollectionEquivalentConstraint.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/constraints/CollectionEquivalentConstraint.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

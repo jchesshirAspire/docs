@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>Retry | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Retry | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -88,10 +89,15 @@
 <p>RetryAttribute is used on a test method to specify that it should be rerun if it fails, up to a maximum number of times.</p>
 <p>Notes:</p>
 <ol>
-<li>The argument you specify is the total number of attempts and <strong>not</strong> the number of retries after an initial failure. So <code>[Retry(1)]</code> does nothing and should not be used.</li>
-<li>It is not currently possible to use <code>RetryAttribute</code> on a <code>TestFixture</code> or any other type of test suite. Only single tests may be repeated.</li>
-<li>If a test has an unexpected exception, an error result is returned and it is not retried. Only assertion failures can trigger a retry. To convert an unexpected exception into an assertion failure, see the <a class="xref" href="../constraints/ThrowsConstraint.html">ThrowsConstraint</a>.</li>
+<li>The argument you specify is the total number of attempts and <strong>not</strong> the number of retries after an initial failure.
+So <code>[Retry(1)]</code> does nothing and should not be used.</li>
+<li>It is not currently possible to use <code>RetryAttribute</code> on a <code>TestFixture</code> or any other type of test suite. Only single
+tests may be repeated.</li>
+<li>If a test has an unexpected exception, an error result is returned and it is not retried. Only assertion failures can
+trigger a retry. To convert an unexpected exception into an assertion failure, see the
+<a class="xref" href="../constraints/ThrowsConstraint.html">ThrowsConstraint</a>.</li>
 </ol>
+
 </article>
           </div>
 
@@ -100,7 +106,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/attributes/retry.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/attributes/retry.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

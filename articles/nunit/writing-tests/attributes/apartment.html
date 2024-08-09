@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>Apartment | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Apartment | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -85,16 +86,14 @@
             <article class="content wrap" id="_content" data-uid="apartment-attribute">
 <h1 id="apartment">Apartment</h1>
 
-<p>The <code>ApartmentAttribute</code> is used on a test method, class or assembly
-to specify that the tests should be run in a particular <a href="https://learn.microsoft.com/en-us/windows/win32/com/processes--threads--and-apartments">apartment</a>, either
+<p>The <code>ApartmentAttribute</code> is used on a test method, class or assembly to specify that the tests should be run in a
+particular <a href="https://learn.microsoft.com/en-us/windows/win32/com/processes--threads--and-apartments">apartment</a>, either
 the STA or the MTA.</p>
-<p>When running tests in parallel, the test is simply scheduled to execute
-from a queue that uses the apartment specified. When the parallel feature
-is not in use, it causes creation of a new thread if the parent test is
-not already running in the correct apartment.</p>
+<p>When running tests in parallel, the test is simply scheduled to execute from a queue that uses the apartment specified.
+When the parallel feature is not in use, it causes creation of a new thread if the parent test is not already running in
+the correct apartment.</p>
 <p>When this attribute is not specified, tests run in the MTA.</p>
-<p>This attribute replaces the RequiresMTA and RequiresSTA attributes, which
-are now considered obsolete.</p>
+<p>This attribute replaces the RequiresMTA and RequiresSTA attributes, which are now considered obsolete.</p>
 <h2 id="assembly-level-examples">Assembly Level Examples</h2>
 <pre><code class="lang-csharp">
 // All the tests in this assembly will use the MTA by default. Since
@@ -146,6 +145,7 @@ public class AnotherFixture
 <ul>
 <li><a href="requiresthread.html">RequiresThread Attribute</a></li>
 </ul>
+
 </article>
           </div>
 
@@ -154,7 +154,7 @@ public class AnotherFixture
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/attributes/apartment.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/attributes/apartment.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

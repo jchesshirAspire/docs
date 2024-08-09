@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>NUnit1029 | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="NUnit1029 | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
@@ -112,7 +113,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Code</td>
-<td style="text-align: left;"><a href="https://github.com/nunit/nunit.analyzers/blob/3.8.0/src/nunit.analyzers/TestCaseSourceUsage/TestCaseSourceUsesStringAnalyzer.cs">TestCaseSourceUsesStringAnalyzer</a></td>
+<td style="text-align: left;"><a href="https://github.com/nunit/nunit.analyzers/blob/4.1.0/src/nunit.analyzers/TestCaseSourceUsage/TestCaseSourceUsesStringAnalyzer.cs">TestCaseSourceUsesStringAnalyzer</a></td>
 </tr>
 </tbody>
 </table>
@@ -120,7 +121,8 @@
 <p>The number of parameters provided by the TestCaseSource must match the number of parameters in the Test method.</p>
 <p>Note that the current implementation only works for single parameters.</p>
 <h2 id="motivation">Motivation</h2>
-<p>A <code>TestCaseSourceAttribute</code> is used to pass parameters to a test method, but the test method does not expect any or more parameters than supplied.</p>
+<p>A <code>TestCaseSourceAttribute</code> is used to pass parameters to a test method, but the test method does not expect any or more
+parameters than supplied.</p>
 <pre><code class="lang-charp">private static readonly IEnumerable&lt;string&gt; NUnitNameSpaces = new[] { &quot;.NUnit&quot;, &quot;.NUnitExtensions&quot; };
 
 [TestCaseSource(nameof(NUnitNameSpaces))]
@@ -133,7 +135,8 @@ public void IsNUnit()
 <!-- start generated config severity -->
 <h2 id="configure-severity">Configure severity</h2>
 <h3 id="via-ruleset-file">Via ruleset file</h3>
-<p>Configure the severity per project, for more info see <a href="https://learn.microsoft.com/en-us/visualstudio/code-quality/using-rule-sets-to-group-code-analysis-rules?view=vs-2022">MSDN</a>.</p>
+<p>Configure the severity per project, for more info see
+<a href="https://learn.microsoft.com/en-us/visualstudio/code-quality/using-rule-sets-to-group-code-analysis-rules?view=vs-2022">MSDN</a>.</p>
 <h3 id="via-editorconfig-file">Via .editorconfig file</h3>
 <pre><code class="lang-ini"># NUnit1029: The number of parameters provided by the TestCaseSource does not match the number of parameters in the Test method
 dotnet_diagnostic.NUnit1029.severity = chosenSeverity
@@ -153,6 +156,7 @@ Code violating the rule here
     Justification = &quot;Reason...&quot;)]
 </code></pre>
 <!-- end generated config severity -->
+
 </article>
           </div>
 
@@ -161,7 +165,7 @@ Code violating the rule here
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit-analyzers/NUnit1029.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit-analyzers/NUnit1029.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

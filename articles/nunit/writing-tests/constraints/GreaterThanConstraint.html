@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>GreaterThan Constraint | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="GreaterThan Constraint | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -97,12 +98,15 @@ Is.Positive // Equivalent to Is.GreaterThan(0)
 <pre><code class="lang-csharp">...Using(IComparer comparer)
 ...Using&lt;T&gt;(IComparer&lt;T&gt; comparer)
 ...Using&lt;T&gt;(Comparison&lt;T&gt; comparer)
+...Within(object tolerance)
 </code></pre>
 <h2 id="examples-of-use">Examples of Use</h2>
 <pre><code class="lang-csharp">Assert.That(7, Is.GreaterThan(3));
 Assert.That(myOwnObject, Is.GreaterThan(theExpected).Using(myComparer));
 Assert.That(42, Is.Positive);
+Assert.That(myDateTime, Is.GreaterThan(expectedDateTime).Within(TimeSpan.FromSeconds(1)))
 </code></pre>
+
 </article>
           </div>
 
@@ -111,7 +115,7 @@ Assert.That(42, Is.Positive);
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/constraints/GreaterThanConstraint.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/constraints/GreaterThanConstraint.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

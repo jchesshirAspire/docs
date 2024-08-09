@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>SomeItems Constraint | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="SomeItems Constraint | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -85,12 +86,24 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="someitems-constraint">SomeItems Constraint</h1>
 
-<p><code>SomeItemsConstraint</code> applies a constraint to each item in an <code>IEnumerable</code>, succeeding if at least one of them succeeds. An exception is thrown if the actual value passed does not implement <code>IEnumerable</code>.</p>
+<p><code>SomeItemsConstraint</code> applies a constraint to each item in an <code>IEnumerable</code>, succeeding if at least one of them
+succeeds. An exception is thrown if the actual value passed does not implement <code>IEnumerable</code>.</p>
 <h2 id="constructor">Constructor</h2>
 <pre><code class="lang-csharp">SomeItemsConstraint(Constraint itemConstraint)
 </code></pre>
 <h2 id="syntax">Syntax</h2>
 <pre><code class="lang-csharp">Has.Some...
+</code></pre>
+<h2 id="modifiers">Modifiers</h2>
+<pre><code class="lang-csharp">...IgnoreCase
+...IgnoreWhiteSpace  // From version 4.2
+...Using(IEqualityComparer comparer)
+...Using(IComparer comparer)
+...Using&lt;T&gt;(IEqualityComparer&lt;T&gt; comparer)
+...Using&lt;T&gt;(IComparer&lt;T&gt; comparer)
+...Using&lt;T&gt;(Comparison&lt;T&gt; comparer)
+...Using&lt;TActualCollectionElement, TExpectedElement&gt;(Func&lt;TActualCollectionElement, TExpectedElement, bool&gt; comparer)
+...UsingPropertiesComparer()  // From version 4.1
 </code></pre>
 <h2 id="examples-of-use">Examples of Use</h2>
 <pre><code class="lang-csharp">int[] iarray = new int[] { 1, 2, 3 };
@@ -98,6 +111,7 @@ string[] sarray = new string[] { &quot;a&quot;, &quot;b&quot;, &quot;c&quot; };
 Assert.That(iarray, Has.Some.GreaterThan(2));
 Assert.That(sarray, Has.Some.Length.EqualTo(1));
 </code></pre>
+
 </article>
           </div>
 
@@ -106,7 +120,7 @@ Assert.That(sarray, Has.Some.Length.EqualTo(1));
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/constraints/SomeItemsConstraint.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/constraints/SomeItemsConstraint.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

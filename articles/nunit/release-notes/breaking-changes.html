@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>Breaking Changes | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Breaking Changes | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -85,6 +86,28 @@
             <article class="content wrap" id="_content" data-uid="breakingchanges">
 <h1 id="breaking-changes">Breaking Changes</h1>
 
+<h2 id="nunit-40">NUnit 4.0</h2>
+<p>See the <a class="xref" href="Nunit4.0-MigrationGuide.html">Migration Guide</a> for moving your tests from NUnit 3.x to NUnit 4.0 if you are using any
+of the following features:</p>
+<ul>
+<li>The <a href="../writing-tests/assertions/assertion-models/classic.html">Classic Asserts</a> have been moved to a separate library
+and their namespace and their class name were renamed to: <code>NUnit.Framework.Legacy.ClassicAssert</code>.</li>
+<li>The standalone assert classes have also been moved to the <code>NUnit.Framework.Legacy</code> namespace. These classes are:
+<ul>
+<li><a href="../writing-tests/assertions/classic-assertions/Collection-Assert.html">CollectionAssert</a></li>
+<li><a href="../writing-tests/assertions/classic-assertions/String-Assert.html">StringAssert</a></li>
+<li><a href="../writing-tests/assertions/classic-assertions/Directory-Assert.html">DirectoryAssert</a></li>
+<li><a href="../writing-tests/assertions/classic-assertions/File-Assert.html">FileAssert</a></li>
+</ul>
+</li>
+<li>Assert.That overloads with <em>format</em> specification and <code>params</code> have been removed in favor of an overload using
+<code>FormattableString</code>.</li>
+<li>The lowest framework version supported is now version 4.6.2 and .Net 6.0.</li>
+</ul>
+<p>See full list of <a href="https://docs.nunit.org/articles/nunit/release-notes/framework.html#deprecated-features">deprecated
+issues</a> and <a href="https://docs.nunit.org/articles/nunit/release-notes/framework.html#the-following-issues-are-marked-as-breaking-changes">breaking
+changes</a>
+in the framework.</p>
 <h2 id="nunit-310">NUnit 3.10</h2>
 <ul>
 <li><code>NUnit.Framework.Constraints.NUnitEqualityComparer.Default</code> was deprecated in favor of <code>new NUnitEqualityComparer()</code>.</li>
@@ -114,21 +137,33 @@
 </ul>
 <h2 id="nunit-37">NUnit 3.7</h2>
 <ul>
-<li>The AssertionHelper class has now been deprecated. Users can use the <a href="https://github.com/fluffynuts/NUnit.StaticExpect">NUnit.StaticExpect</a> library as a near drop-in replacement.</li>
+<li>The AssertionHelper class has now been deprecated. Users can use the
+<a href="https://github.com/fluffynuts/NUnit.StaticExpect">NUnit.StaticExpect</a> library as a near drop-in replacement.</li>
 </ul>
 <h2 id="nunit-34">NUnit 3.4</h2>
 <p>Breaking changes introduced in NUnit 3.4</p>
 <ul>
-<li><p>The <code>--teamcity</code> console command-line option now requires the TeamCityEventListener extension to be installed. This only affects users who install the extensions individually or copy them to another directory. If you install using the Windows installer or the NUnit.Console NuGet package the TeamCity extension is included.</p>
+<li><p>The <code>--teamcity</code> console command-line option now requires the TeamCityEventListener extension to be installed. This
+only affects users who install the extensions individually or copy them to another directory. If you install using the
+Windows installer or the NUnit.Console NuGet package the TeamCity extension is included.</p>
 </li>
 <li><p>String arguments in the names of test cases are no longer truncated to 40 characters.</p>
 </li>
-<li><p>The .NET 2.0 build of the nunit framework uses a private implementation of System.Linq. NUnit installs the NUnit.System.Linq assembly alongside the nunit.framework assembly. If you copy the framework to another location, you must ensure that both are copied. The extra assembly is not used in other builds because System.Linq is already supported in those environments.</p>
+<li><p>The .NET 2.0 build of the nunit framework uses a private implementation of System.Linq. NUnit installs the
+NUnit.System.Linq assembly alongside the nunit.framework assembly. If you copy the framework to another location, you
+must ensure that both are copied. The extra assembly is not used in other builds because System.Linq is already
+supported in those environments.</p>
 </li>
 </ul>
 <h2 id="nunit-30">NUnit 3.0</h2>
-<p>A relatively large number of features present in NUnit 2.6, were either removed in NUnit 3.0 or had their behavior modified in a way that will break existing code.</p>
-<p>A key change is that the NUnit Test Engine will not recognize a test assembly that does not reference the NUnit framework directly. Normally, test assemblies use NUnit Asserts, attributes and other Types and methods. However, certain third-party frameworks are designed to completely isolate the user from the details of NUnit. They mediate between the test assembly and the NUnit framework in order to run tests. In such a case, NUnit will indicate that the assembly either contains no tests or the proper driver could not be found. To resolve this situation, simply add one NUnit attribute or other reference. An assembly-level <code>ParallelizableAttribute</code> is useful for this purpose.</p>
+<p>A relatively large number of features present in NUnit 2.6, were either removed in NUnit 3.0 or had their behavior
+modified in a way that will break existing code.</p>
+<p>A key change is that the NUnit Test Engine will not recognize a test assembly that does not reference the NUnit
+framework directly. Normally, test assemblies use NUnit Asserts, attributes and other Types and methods. However,
+certain third-party frameworks are designed to completely isolate the user from the details of NUnit. They mediate
+between the test assembly and the NUnit framework in order to run tests. In such a case, NUnit will indicate that the
+assembly either contains no tests or the proper driver could not be found. To resolve this situation, simply add one
+NUnit attribute or other reference. An assembly-level <code>ParallelizableAttribute</code> is useful for this purpose.</p>
 <p>Other breaking changes are grouped in the following tables.</p>
 <h3 id="attributes">Attributes</h3>
 <table>
@@ -310,6 +345,10 @@
 <td>The <code>Throws</code> Named Property is no longer available. Use <code>Assert.Throws</code> or <code>Assert.That</code> in your test case.</td>
 </tr>
 <tr>
+<td>TestCaseData</td>
+<td>The <code>Categories</code> Named Property is no longer available. Use <code>Properties[&quot;Category&quot;]</code> instead.</td>
+</tr>
+<tr>
 <td>TestContext</td>
 <td>The fields available in the <a class="xref" href="../writing-tests/TestContext.html">TestContext</a> have changed, although the same information remains available as for NUnit V2.</td>
 </tr>
@@ -320,7 +359,8 @@
 </tbody>
 </table>
 <h3 id="console-features">Console Features</h3>
-<p>The console runner is now called <code>nunit3-console</code>. The following breaking changes apply to the options that  the new runner supports.</p>
+<p>The console runner is now called <code>nunit3-console</code>. The following breaking changes apply to the options that  the new
+runner supports.</p>
 <table>
 <thead>
 <tr>
@@ -417,6 +457,7 @@
 </tr>
 </tbody>
 </table>
+
 </article>
           </div>
 
@@ -425,7 +466,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/release-notes/breaking-changes.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/release-notes/breaking-changes.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

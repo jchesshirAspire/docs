@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>NUnite Lite Runner | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="NUnite Lite Runner | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -85,32 +86,50 @@
             <article class="content wrap" id="_content" data-uid="nunitlite">
 <h1 id="nunite-lite-runner">NUnite Lite Runner</h1>
 
-<p>NUnitLite started out life as a separate version of the NUnit framework, with fewer features and a built-in test runner. It ran on devices as well as on desktop .NET and mono and allowed users to create executable tests without the overhead of a full NUnit installation.</p>
-<p>With NUnit 3.0, the NUnitLite framework has been merged with the full NUnit framework. There
-is now only one framework, <strong>nunit.framework.dll</strong>. The built-in runner, which was a part of the old NUnitLite, is now packaged as <strong>nunitlite.dll</strong>.</p>
+<p>NUnitLite started out life as a separate version of the NUnit framework, with fewer features and a built-in test runner.
+It ran on devices as well as on desktop .NET and mono and allowed users to create executable tests without the overhead
+of a full NUnit installation.</p>
+<p>With NUnit 3.0, the NUnitLite framework has been merged with the full NUnit framework. There is now only one framework,
+<strong>nunit.framework.dll</strong>. The built-in runner, which was a part of the old NUnitLite, is now packaged as
+<strong>nunitlite.dll</strong>.</p>
 <h2 id="using-nunitlite">Using NUnitLite</h2>
 <p>To run tests under NUnitLite, proceed as follows:</p>
 <ul>
-<li><p>Create a console application to use as your test assembly. If you have already placed tests in a dll, you can change the project so that it produces a console application and reload it.</p>
-</li>
-<li><p>Make sure your test assembly references both <strong>nunit.framework</strong> and <strong>nunitlite</strong>.</p>
-</li>
-<li><p>The Main() for your console application should look something like this...</p>
-</li>
+<li>You can use your existing unit test project (created with the <code>dotnet new nunit</code> command or from Visual Studio) or
+create a new console application.  If you use an existing test project you will get a warning about duplicate entry
+points. This can be ignored.</li>
 </ul>
-<pre><code class="lang-csharp">public static int Main(string[] args)
-{
-  return new AutoRun().Execute(args);
-}
+<p>Using a standard test project has the benefit that you can use both the standard <code>dotnet test</code> command, the Visual
+Studio Test Explorer and the NUnitLite runner to run your tests.</p>
+<ul>
+<li>Make sure your test assembly references both <strong>nunit.framework</strong> and <strong>nunitlite</strong>.</li>
+</ul>
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;NUnitLite&quot; Version=&quot;4.0.1&quot; /&gt;
+&lt;PackageReference Include=&quot;NUnit&quot; Version=&quot;4.0.1&quot; /&gt;
 </code></pre>
+<p>Optionally you can set the <code>OutputType</code> in a <code>PropertyGroup</code> to <code>Exe</code>, which allows you to run the tests directly and
+without the <code>dotnet run</code>.</p>
+<pre><code class="lang-xml">  &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+</code></pre>
+<ul>
+<li>Add a <code>Program.cs</code> containing a top level statements main routine like:</li>
+</ul>
+<pre><code class="lang-csharp" name="ProgramCS">using NUnitLite;
+
+return new AutoRun().Execute(args);
+</code></pre>
+<p>If you don't use top-level statements, then just create a standard main routine with the same code.</p>
 <ul>
 <li>Execute your test application in order to run the tests.</li>
 </ul>
-<p>If you install the NUnitLite runner via the NuGet package, steps 2 is handled
-automatically. Both assemblies are installed and referenced for you.</p>
+<pre><code class="lang-cmd">dotnet run
+</code></pre>
+<p>If you install the NUnitLite runner via the NuGet package, steps 2 is handled automatically. Both assemblies are
+installed and referenced for you.</p>
 <h2 id="nunitlite-output">NUnitLite Output</h2>
 <p>As seen in the following screen shot, the output from an NUnitLite run is quite similar to that from the console runner.</p>
 <p><img src="../../../images/nunitlite-mock.png" alt="Screenshot of NUnitLite"></p>
+
 </article>
           </div>
 
@@ -119,7 +138,7 @@ automatically. Both assemblies are installed and referenced for you.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/running-tests/NUnitLite-Runner.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/running-tests/NUnitLite-Runner.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

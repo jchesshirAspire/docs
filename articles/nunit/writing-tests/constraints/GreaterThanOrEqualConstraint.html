@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>GreaterThanOrEqual Constraint | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="GreaterThanOrEqual Constraint | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -97,6 +98,7 @@ Is.AtLeast(object expected)
 <pre><code class="lang-csharp">...Using(IComparer comparer)
 ...Using&lt;T&gt;(IComparer&lt;T&gt; comparer)
 ...Using&lt;T&gt;(Comparison&lt;T&gt; comparer)
+...Within(object tolerance)
 </code></pre>
 <h2 id="examples-of-use">Examples of Use</h2>
 <pre><code class="lang-csharp">Assert.That(7, Is.GreaterThanOrEqualTo(3));
@@ -104,7 +106,9 @@ Assert.That(7, Is.AtLeast(3));
 Assert.That(7, Is.GreaterThanOrEqualTo(7));
 Assert.That(7, Is.AtLeast(7));
 Assert.That(myOwnObject, Is.GreaterThanOrEqualTo(theExpected).Using(myComparer));
+Assert.That(myDateTime, Is.GreaterThanOrEqualTo(expectedDateTime).Within(TimeSpan.FromSeconds(1)))
 </code></pre>
+
 </article>
           </div>
 
@@ -113,7 +117,7 @@ Assert.That(myOwnObject, Is.GreaterThanOrEqualTo(theExpected).Using(myComparer))
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/constraints/GreaterThanOrEqualConstraint.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/constraints/GreaterThanOrEqualConstraint.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

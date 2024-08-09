@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>Assertion Helper | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Assertion Helper | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -86,11 +87,11 @@
 <h1 id="assertion-helper">Assertion Helper</h1>
 
 <blockquote>
-<p>AssertionHelper has been deprecated as of NUnit Framework 3.7. The syntax is now maintained and being enhanced as an independent library, <a href="https://github.com/fluffynuts/NUnit.StaticExpect">NUnit.StaticExpect</a>.</p>
+<p>AssertionHelper has been deprecated as of NUnit Framework 3.7. The syntax is now maintained and being enhanced as an
+independent library, <a href="https://github.com/fluffynuts/NUnit.StaticExpect">NUnit.StaticExpect</a>.</p>
 </blockquote>
-<p>Some users prefer a shorter form of assertion than is given by Assert.That.
-If you derive your test fixture class from <strong>AssertionHelper</strong>, the
-Expect() method may be used instead...</p>
+<p>Some users prefer a shorter form of assertion than is given by Assert.That. If you derive your test fixture class from
+<strong>AssertionHelper</strong>, the Expect() method may be used instead...</p>
 <pre><code class="lang-csharp">Expect(bool condition);
 Expect(bool condition, string message, params object[] params);
 
@@ -104,10 +105,13 @@ Expect&lt;TActual&gt;(TActual actual, IResolveConstraint constraint,
 
 Expect(TestDelegate del, IResolveConstraint constraint);
 </code></pre>
-<p>In addition, <strong>AssertionHelper</strong> allows the derived class to make direct use of many of the syntactic elements that would normally require you to specify the <strong>Is</strong>, <strong>Has</strong> or <strong>Does</strong> class in order to use them. For example, you can write...</p>
+<p>In addition, <strong>AssertionHelper</strong> allows the derived class to make direct use of many of the syntactic elements that
+would normally require you to specify the <strong>Is</strong>, <strong>Has</strong> or <strong>Does</strong> class in order to use them. For example, you can
+write...</p>
 <pre><code class="lang-csharp">Expect(actual, EqualTo(&quot;Hello&quot;));
 </code></pre>
 <p>Use Intellisense to determine which syntactic elements are available in the current release.</p>
+
 </article>
           </div>
 
@@ -116,7 +120,7 @@ Expect(TestDelegate del, IResolveConstraint constraint);
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/AssertionHelper.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/AssertionHelper.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

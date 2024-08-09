@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>DictionaryContainsValue Constraint | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="DictionaryContainsValue Constraint | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -102,7 +103,8 @@ Does.Not.ContainValue(object)
 ...Using&lt;T&gt;(Comparison&lt;T&gt; comparer)
 ...Using&lt;T&gt;(Func&lt;T, T, bool&gt; comparer)
 ...Using&lt;T&gt;(IEqualityComparer&lt;T&gt; comparer)
-...Using&lt;TCollectionType, TMemberType&gt;(Func&lt;TCollectionType, TMemberType, bool&gt; comparison)
+...Using&lt;TActualValueElement, TExpected&gt;(Func&lt;TActualValueElement, TExpected, bool&gt; comparison)
+...UsingPropertiesComparer()  // From version 4.1
 </code></pre>
 <h2 id="examples-of-use">Examples of Use</h2>
 <pre><code class="lang-csharp">IDictionary&lt;int, int&gt; idict = new IDictionary&lt;int, int&gt; { { 1, 4 }, { 2, 5 } };
@@ -117,6 +119,7 @@ Assert.That(mydict, Contains.Value(myOwnObject).Using(myComparer));
 <li><a href="DictionaryContainsKeyConstraint.html">DictionaryContainsKeyConstraint</a></li>
 <li><a href="DictionaryContainsKeyValuePairConstraint.html">DictionaryContainsKeyValuePairConstraint.md</a></li>
 </ul>
+
 </article>
           </div>
 
@@ -125,7 +128,7 @@ Assert.That(mydict, Contains.Value(myOwnObject).Using(myComparer));
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/constraints/DictionaryContainsValueConstraint.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/constraints/DictionaryContainsValueConstraint.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

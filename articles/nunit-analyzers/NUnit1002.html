@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>NUnit1002 | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="NUnit1002 | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
@@ -112,14 +113,15 @@
 </tr>
 <tr>
 <td style="text-align: left;">Code</td>
-<td style="text-align: left;"><a href="https://github.com/nunit/nunit.analyzers/blob/3.8.0/src/nunit.analyzers/TestCaseSourceUsage/TestCaseSourceUsesStringAnalyzer.cs">TestCaseSourceUsesStringAnalyzer</a></td>
+<td style="text-align: left;"><a href="https://github.com/nunit/nunit.analyzers/blob/4.1.0/src/nunit.analyzers/TestCaseSourceUsage/TestCaseSourceUsesStringAnalyzer.cs">TestCaseSourceUsesStringAnalyzer</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="description">Description</h2>
 <p>The TestCaseSource should use nameof operator to specify target.</p>
 <h2 id="motivation">Motivation</h2>
-<p>Prevent test rot by ensuring that future renames don't accidentally break tests in an unexpected way. <code>nameof</code> adds some compile-time support in these situations.</p>
+<p>Prevent test rot by ensuring that future renames don't accidentally break tests in an unexpected way. <code>nameof</code> adds some
+compile-time support in these situations.</p>
 <h2 id="how-to-fix-violations">How to fix violations</h2>
 <h3 id="example-violation">Example Violation</h3>
 <pre><code class="lang-csharp">[TestCaseSource(&quot;MyTestSource&quot;)]
@@ -134,9 +136,11 @@ public static object[] MyTestSource()
 }
 </code></pre>
 <h3 id="problem">Problem</h3>
-<p>In this case, we're referring to <code>&quot;MyTestSource&quot;</code> as a string directly. This is brittle; should the name of the property change, the test case source would become invalid, and we would not know this until executing tests.</p>
+<p>In this case, we're referring to <code>&quot;MyTestSource&quot;</code> as a string directly. This is brittle; should the name of the property
+change, the test case source would become invalid, and we would not know this until executing tests.</p>
 <h3 id="fix">Fix</h3>
-<p>The fix is to use the C# <code>nameof</code> operator, which produces a string but references the field name. This way, when refactoring and changing the name of your test source, it would also update the name within the <code>nameof()</code> operator.</p>
+<p>The fix is to use the C# <code>nameof</code> operator, which produces a string but references the field name. This way, when
+refactoring and changing the name of your test source, it would also update the name within the <code>nameof()</code> operator.</p>
 <p>The fix in action:</p>
 <pre><code class="lang-csharp">[TestCaseSource(nameof(MyTestSource))] // using nameof
 public void SampleTest(string stringValue)
@@ -152,7 +156,8 @@ public static object[] MyTestSource()
 <!-- start generated config severity -->
 <h2 id="configure-severity">Configure severity</h2>
 <h3 id="via-ruleset-file">Via ruleset file</h3>
-<p>Configure the severity per project, for more info see <a href="https://learn.microsoft.com/en-us/visualstudio/code-quality/using-rule-sets-to-group-code-analysis-rules?view=vs-2022">MSDN</a>.</p>
+<p>Configure the severity per project, for more info see
+<a href="https://learn.microsoft.com/en-us/visualstudio/code-quality/using-rule-sets-to-group-code-analysis-rules?view=vs-2022">MSDN</a>.</p>
 <h3 id="via-editorconfig-file">Via .editorconfig file</h3>
 <pre><code class="lang-ini"># NUnit1002: The TestCaseSource should use nameof operator to specify target
 dotnet_diagnostic.NUnit1002.severity = chosenSeverity
@@ -172,6 +177,7 @@ Code violating the rule here
     Justification = &quot;Reason...&quot;)]
 </code></pre>
 <!-- end generated config severity -->
+
 </article>
           </div>
 
@@ -180,7 +186,7 @@ Code violating the rule here
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit-analyzers/NUnit1002.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit-analyzers/NUnit1002.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

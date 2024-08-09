@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>Project Loaders | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Project Loaders | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -85,12 +86,15 @@
             <article class="content wrap" id="_content" data-uid="projectloaders">
 <h1 id="project-loaders">Project Loaders</h1>
 
-<p><strong>Project Loaders</strong> are extensions that know how to load a project in a particular format and create a package suitable for running tests under NUnit. The NUnit Organization itself provides two of them:</p>
+<p><strong>Project Loaders</strong> are extensions that know how to load a project in a particular format and create a package suitable
+for running tests under NUnit. The NUnit Organization itself provides two of them:</p>
 <ul>
 <li>NUnitProjectLoader</li>
 <li>VisualStudioProjectLoader</li>
 </ul>
-<p>The extension point for project loaders accepts extensions that implement the <code>NUnit.Engine.Extensibility.IProjectLoader</code> interface. The definition of a project loader extension might look something like the following...</p>
+<p>The extension point for project loaders accepts extensions that implement the
+<code>NUnit.Engine.Extensibility.IProjectLoader</code> interface. The definition of a project loader extension might look something
+like the following...</p>
 <pre><code class="lang-csharp">[Extension]
 [ExtensionProperty(&quot;FileExtension&quot;, &quot;.xxx&quot;)]
 [ExtensionProperty(&quot;FileExtension&quot;, &quot;.yyy&quot;)]
@@ -168,7 +172,9 @@ public interface IProject
     TestPackage GetTestPackage(string configName);
 }
 </code></pre>
-<p><code>TestPackage</code> is defined in the <code>nunit.engine.api</code> assembly and includes a list of assemblies together with a dictionary of settings used by the package.</p>
+<p><code>TestPackage</code> is defined in the <code>nunit.engine.api</code> assembly and includes a list of assemblies together with a dictionary
+of settings used by the package.</p>
+
 </article>
           </div>
 
@@ -177,7 +183,7 @@ public interface IProject
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit-engine/extensions/creating-extensions/Project-Loaders.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit-engine/extensions/creating-extensions/Project-Loaders.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

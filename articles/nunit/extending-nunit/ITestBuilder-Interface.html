@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>ITestBuilder Interface | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="ITestBuilder Interface | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -85,15 +86,22 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="itestbuilder-interface">ITestBuilder Interface</h1>
 
-<p>This interface is used by attributes that know how to build one or more parameterized <code>TestMethod</code> instances from a <code>MethodInfo</code>. <code>ITestMethodBuilder</code> is defined as follows:</p>
+<p>This interface is used by attributes that know how to build one or more parameterized <code>TestMethod</code> instances from a
+<code>MethodInfo</code>. <code>ITestMethodBuilder</code> is defined as follows:</p>
 <pre><code class="lang-csharp">public interface ITestBuilder
 {
     IEnumerable&lt;TestMethod&gt; BuildFrom(IMethodInfo method, Test suite);
 }
 </code></pre>
-<p><code>IMethodInfo</code> is an NUnit internal class used to wrap a MethodInfo. See the <a href="https://github.com/nunit/nunit/blob/master/src/NUnitFramework/framework/Interfaces/IMethodInfo.cs">source code</a> for more info. The <code>suite</code> argument is the test suite that contains the method in question.</p>
-<p>A custom attribute implementing this interface should examine the IMethodInfo and return as many <code>TestMethod</code> instances as it is able to construct, using the parameters available to it. Some attributes will only return a single test, just as <code>TestCaseAttribute</code> does. Others, working like <code>TheoryAttribute</code> may return multiple tests. If no data is available to create tests, an empty collection should be returned.</p>
-<p>If the returned tests are standard NUnit TestMethods, the helper class <code>NUnitTestCaseBuilder</code> may be used to create them.</p>
+<p><code>IMethodInfo</code> is an NUnit internal class used to wrap a MethodInfo. See the <a href="https://github.com/nunit/nunit/blob/master/src/NUnitFramework/framework/Interfaces/IMethodInfo.cs">source
+code</a> for more info.
+The <code>suite</code> argument is the test suite that contains the method in question.</p>
+<p>A custom attribute implementing this interface should examine the IMethodInfo and return as many <code>TestMethod</code> instances
+as it is able to construct, using the parameters available to it. Some attributes will only return a single test, just
+as <code>TestCaseAttribute</code> does. Others, working like <code>TheoryAttribute</code> may return multiple tests. If no data is available
+to create tests, an empty collection should be returned.</p>
+<p>If the returned tests are standard NUnit TestMethods, the helper class <code>NUnitTestCaseBuilder</code> may be used to create
+them.</p>
 <p>The following NUnit attributes currently implement <code>ITestBuilder</code>:</p>
 <ul>
 <li><code>CombiningStrategyAttribute</code>, with the following derived classes:
@@ -107,6 +115,7 @@
 <li><code>TestCaseSourceAttribute</code></li>
 <li><code>TheoryAttribute</code></li>
 </ul>
+
 </article>
           </div>
 
@@ -115,7 +124,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/extending-nunit/ITestBuilder-Interface.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/extending-nunit/ITestBuilder-Interface.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>TestFixtureData | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="TestFixtureData | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -85,9 +86,11 @@
             <article class="content wrap" id="_content" data-uid="testfixturedata">
 <h1 id="testfixturedata">TestFixtureData</h1>
 
-<p>The <code>TestFixtureData</code> class provides specific instance information for a parameterized fixture, although any object deriving from <code>TestFixtureParameters</code> may be used. Unlike NUnit 2, you cannot implement <code>IFixtureData</code>, you must derive from <code>TestFixtureParameters</code>.</p>
-<p>The following example varies the example shown under <a class="xref" href="attributes/testfixture.html">TestFixture Attribute</a> by using
-a <code>TestFixtureSourceAttribute</code> with a data source in a separately defined class.</p>
+<p>The <code>TestFixtureData</code> class provides specific instance information for a parameterized fixture, although any object
+deriving from <code>TestFixtureParameters</code> may be used. Unlike NUnit 2, you cannot implement <code>IFixtureData</code>, you must derive
+from <code>TestFixtureParameters</code>.</p>
+<p>The following example varies the example shown under <a class="xref" href="attributes/testfixture.html">TestFixture Attribute</a> by using a
+<code>TestFixtureSourceAttribute</code> with a data source in a separately defined class.</p>
 <pre><code class="lang-csharp" name="TestFixtureDataExample">[TestFixtureSource(typeof(MyFixtureData), nameof(MyFixtureData.FixtureParams))]
 public class ParameterizedTestFixture
 {
@@ -142,7 +145,8 @@ public class MyFixtureData
         }
     }
 }
-</code></pre></article>
+</code></pre>
+</article>
           </div>
 
           <div class="hidden-sm col-md-2" role="complementary">
@@ -150,7 +154,7 @@ public class MyFixtureData
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/TestFixtureData.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/TestFixtureData.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

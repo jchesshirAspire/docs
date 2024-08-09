@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>Test | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Test | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -85,21 +86,18 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="test">Test</h1>
 
-<p>The <code>Test</code> attribute is one way of marking a method inside a TestFixture class
-as a test. It is normally used for simple (non-parameterized) tests but may
-also be applied to parameterized tests without causing any extra test cases
-to be generated. See <a class="xref" href="../../technical-notes/usage/Parameterized-Tests.html">Parameterized Tests</a> for more info.</p>
+<p>The <code>Test</code> attribute is one way of marking a method inside a TestFixture class as a test. It is normally used for simple
+(non-parameterized) tests but may also be applied to parameterized tests without causing any extra test cases to be
+generated. See <a class="xref" href="../../technical-notes/usage/Parameterized-Tests.html">Parameterized Tests</a> for more info.</p>
 <p>The test method may be either an instance or a static method.</p>
-<p>Test methods targeting .Net 4.0 or higher may be marked as <strong>async</strong> and NUnit will wait for the method to complete before recording the result and moving on to the next test. Async
-test methods must return <code>Task</code> if no value is returned,
-or <code>Task&lt;T&gt;</code> if a value of type T is returned.</p>
-<p>If the programmer marks a test method that does not have the correct signature
-it will be considered as not runnable.</p>
-<p>If the test method returns a value, you must pass in the <code>ExpectedResult</code>
-named parameter to the Test attribute. This expected return value will be
-checked for equality with the return value of the test method.</p>
-<p>The test <code>Description</code> may be specified as a named parameter. This is exactly equivalent
-to using the <code>DescriptionAttribute</code> on the test.</p>
+<p>Test methods targeting .Net 4.0 or higher may be marked as <strong>async</strong> and NUnit will wait for the method to complete
+before recording the result and moving on to the next test. Async test methods must return <code>Task</code> if no value is
+returned, or <code>Task&lt;T&gt;</code> if a value of type T is returned.</p>
+<p>If the programmer marks a test method that does not have the correct signature it will be considered as not runnable.</p>
+<p>If the test method returns a value, you must pass in the <code>ExpectedResult</code> named parameter to the Test attribute. This
+expected return value will be checked for equality with the return value of the test method.</p>
+<p>The test <code>Description</code> may be specified as a named parameter. This is exactly equivalent to using the
+<code>DescriptionAttribute</code> on the test.</p>
 <h2 id="examples">Examples</h2>
 <pre><code class="lang-csharp">namespace NUnit.Tests
 {
@@ -146,6 +144,7 @@ to using the <code>DescriptionAttribute</code> on the test.</p>
   }
 }
 </code></pre>
+
 </article>
           </div>
 
@@ -154,7 +153,7 @@ to using the <code>DescriptionAttribute</code> on the test.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/attributes/test.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/attributes/test.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

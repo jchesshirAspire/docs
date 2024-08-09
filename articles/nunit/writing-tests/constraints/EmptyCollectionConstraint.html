@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
       <title>EmptyCollection Constraint | NUnit Docs </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="EmptyCollection Constraint | NUnit Docs ">
+    
     
       <link rel="shortcut icon" href="../../../../favicon.ico">
       <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
@@ -85,7 +86,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="emptycollection-constraint">EmptyCollection Constraint</h1>
 
-<p>The <strong>EmptyCollectionConstraint</strong> tests if a Collection or other <code>IEnumerable</code> is empty. An <code>ArgumentException</code> is thrown if the actual value is not an <code>IEnumerable</code> or is null.</p>
+<p>The <strong>EmptyCollectionConstraint</strong> tests if a Collection or other <code>IEnumerable</code> is empty. An <code>ArgumentException</code> is
+thrown if the actual value is not an <code>IEnumerable</code> or is null.</p>
 <h2 id="constructor">Constructor</h2>
 <pre><code class="lang-csharp">EmptyCollectionConstraint()
 </code></pre>
@@ -98,8 +100,10 @@ Assert.That(new int[] { 1, 2, 3 }, Is.Not.Empty);
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p><code>Is.Empty</code> actually creates an <code>EmptyConstraint</code>. Subsequently applying it to an <code>IEnumerable</code> or <code>ICollection</code> causes an <code>EmptyCollectionConstraint</code> to be created.</p>
+<p><code>Is.Empty</code> actually creates an <code>EmptyConstraint</code>. Subsequently applying it to an <code>IEnumerable</code> or
+<code>ICollection</code> causes an <code>EmptyCollectionConstraint</code> to be created.</p>
 </div>
+
 </article>
           </div>
 
@@ -108,7 +112,7 @@ Assert.That(new int[] { 1, 2, 3 }, Is.Not.Empty);
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/constraints/EmptyCollectionConstraint.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/jchesshirAspire/docs/blob/master/docs/articles/nunit/writing-tests/constraints/EmptyCollectionConstraint.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
